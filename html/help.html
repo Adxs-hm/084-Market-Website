@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>帮助中心 - 零八四商城</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/data.js"></script>
+</head>
+<body>
+    <div id="help-page">
+        <!-- HEADER -->
+        <div class="header">
+            <div class="container">
+                <a href="index.html" class="logo">084 MALL</a>
+                
+                <div class="search-box">
+                    <input type="text" placeholder="搜索您喜爱的商品...">
+                    <button onclick="handleSearch()">搜索</button>
+                </div>
+
+                <div class="header-right">
+                    <div class="header-cat-dropdown">
+                        <span>☰ 商品分类 ▼</span>
+                        <div class="cat-menu">
+                            <a href="list.html?cat=elec">⚡ 数码电器</a>
+                            <a href="list.html?cat=fashion">👗 时尚服饰</a>
+                            <a href="list.html?cat=food">🍔 美食特产</a>
+                            <a href="list.html?cat=home">🏠 家居生活</a>
+                            <a href="list.html?cat=books">📚 图书音像</a>
+                            <a href="list.html?cat=toys">🧸 玩具乐器</a>
+                        </div>
+                    </div>
+                    <a href="cart.html" class="my-cart-btn">购物车 (<span id="cart-count">0</span>)</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- NAV BAR -->
+        <div class="nav">
+            <div class="container">
+                <ul class="nav-list">
+                    <li><a href="index.html">首页</a></li>
+                    <li>
+                        <a href="list.html" style="padding-right: 35px;">全部商品 <span style="font-size:12px;">▼</span></a>
+                        <div class="nav-dropdown">
+                            <a href="list.html?cat=elec">数码电器</a>
+                            <a href="list.html?cat=fashion">时尚服饰</a>
+                            <a href="list.html?cat=food">美食特产</a>
+                            <a href="list.html?cat=home">家居生活</a>
+                            <a href="list.html?cat=books">图书音像</a>
+                            <a href="list.html?cat=toys">玩具乐器</a>
+                            <a href="list.html?cat=sports">运动户外</a>
+                            <a href="list.html?cat=auto">汽车用品</a>
+                        </div>
+                    </li>
+                    <li><a href="about.html">关于我们</a></li>
+                    <li><a href="contact.html">联系我们</a></li>
+                    <li><a href="help.html">帮助中心</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- CONTENT -->
+        <div class="container" style="margin-top:20px;">
+            <h1 class="section-title">帮助中心</h1>
+            
+            <div style="background:#fff; padding:30px; margin-bottom:20px; border-radius:4px; box-shadow:0 1px 3px rgba(0,0,0,0.1);">
+                <h3 style="color:#e4393c; border-bottom:1px solid #eee; padding-bottom:10px; margin-bottom:15px;">如何下订单？</h3>
+                <p style="color:#666; line-height:1.8;">
+                    1. 浏览您喜欢的商品，点击“加入购物车”。<br>
+                    2. 进入购物车页面，确认商品数量无误。<br>
+                    3. 在购物车底部填写收货信息，点击“提交订单”即可。
+                </p>
+            </div>
+
+            <div style="background:#fff; padding:30px; margin-bottom:20px; border-radius:4px; box-shadow:0 1px 3px rgba(0,0,0,0.1);">
+                <h3 style="color:#e4393c; border-bottom:1px solid #eee; padding-bottom:10px; margin-bottom:15px;">物流配送说明</h3>
+                <p style="color:#666; line-height:1.8;">
+                    我们与<strong>卡戎快运</strong>合作，提供全场包邮服务。<br>
+                    - 同城订单预计 24 小时内送达。<br>
+                    - 异地订单预计 2-3 天送达。<br>
+                    - 偏远地区预计 3-5 天送达。
+                </p>
+            </div>
+
+            <div style="background:#fff; padding:30px; margin-bottom:20px; border-radius:4px; box-shadow:0 1px 3px rgba(0,0,0,0.1);">
+                <h3 style="color:#e4393c; border-bottom:1px solid #eee; padding-bottom:10px; margin-bottom:15px;">退换货政策</h3>
+                <p style="color:#666; line-height:1.8;">
+                    <strong>7天无理由退货：</strong><br>
+                    只要商品未开封、未使用且不影响二次销售，自签收之日起 7 天内可申请无理由退货。<br>
+                    <strong>质量问题：</strong><br>
+                    如商品存在质量问题，请在 15 天内联系客服，我们承担往返运费进行更换或退款。
+                </p>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <div class="footer">
+            <div class="container">
+                <div style="margin-bottom:20px; color:#666;">
+                    <a href="about.html" style="margin:0 15px;">关于我们</a>|
+                    <a href="contact.html" style="margin:0 15px;">联系我们</a>|
+                    <a href="help.html" style="margin:0 15px;">帮助中心</a>
+                </div>
+                <p>
+                    零八四商城 (084 Mall) &copy; 2024
+                    <a href="admin.html" class="admin-hidden-link" title="系统入口">π</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="../js/script.js"></script>
+</body>
+</html>

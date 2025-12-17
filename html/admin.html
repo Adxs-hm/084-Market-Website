@@ -1,0 +1,235 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>商家后台 - 零八四商城</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/data.js"></script> <!-- Load Data First -->
+</head>
+<body style="background-color: #f0f2f5;"> <!-- Override body bg for admin -->
+
+    <!-- Added id="admin-page" here so script.js knows to run initAdmin() -->
+    <div id="admin-page" class="admin-layout">
+        <!-- SIDEBAR -->
+        <div class="admin-sidebar">
+            <div class="admin-sidebar-header">084 管理后台</div>
+            <ul class="admin-nav">
+                <li><a href="#section-config"><span class="icon">⚙️</span> 系统资源配置</a></li>
+                <li><a href="#section-about"><span class="icon">🏢</span> 关于我们页面</a></li>
+                <li><a href="#section-contact"><span class="icon">📞</span> 联系我们页面</a></li>
+                <li><a href="#section-products"><span class="icon">📦</span> 商品管理系统</a></li>
+                <li style="margin-top: 20px; border-top: 1px solid #3a444e;">
+                    <a href="index.html" style="color: #888;"><span class="icon">↩️</span> 返回商城首页</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- MAIN CONTENT -->
+        <div class="admin-main">
+            
+            <!-- 1. CONFIG CARD -->
+            <div id="section-config" class="admin-card">
+                <h3>1. 系统资源配置</h3>
+                <div class="admin-form-row">
+                    <label class="admin-label">顶部公告文本</label>
+                    <input type="text" id="cfg-marquee" class="admin-input" placeholder="输入滚动公告内容...">
+                </div>
+                
+                <div class="admin-form-row">
+                    <label class="admin-label">首页轮播图配置 (支持本地文件)</label>
+                    <div style="background: #f9f9f9; padding: 15px; border-radius: 4px; border: 1px dashed #ddd;">
+                        <div style="margin-bottom: 10px; display: flex; gap: 10px;">
+                            <input type="text" id="slide-title-1" class="admin-input" placeholder="幻灯片 1 标题">
+                            <!-- Note: File inputs usually don't show text value for security, only selected file name -->
+                            <input type="file" id="file-slide-1" accept="image/*" class="admin-input" style="width: auto;">
+                        </div>
+                        <div style="margin-bottom: 10px; display: flex; gap: 10px;">
+                            <input type="text" id="slide-title-2" class="admin-input" placeholder="幻灯片 2 标题">
+                            <input type="file" id="file-slide-2" accept="image/*" class="admin-input" style="width: auto;">
+                        </div>
+                        <div style="display: flex; gap: 10px;">
+                            <input type="text" id="slide-title-3" class="admin-input" placeholder="幻灯片 3 标题">
+                            <input type="file" id="file-slide-3" accept="image/*" class="admin-input" style="width: auto;">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="admin-form-row" style="display: flex; gap: 20px;">
+                    <div style="flex: 1;">
+                        <label class="admin-label">GIF 广告位 (GIF/图片)</label>
+                        <input type="file" id="file-gif" accept="image/*" class="admin-input">
+                    </div>
+                    <div style="flex: 1;">
+                        <label class="admin-label">背景音乐 (MP3)</label>
+                        <input type="file" id="file-music" accept="audio/*" class="admin-input">
+                    </div>
+                    <div style="flex: 1;">
+                        <label class="admin-label">首页品牌视频 (MP4)</label>
+                        <input type="file" id="file-video" accept="video/*" class="admin-input">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. ABOUT CARD -->
+            <div id="section-about" class="admin-card">
+                <h3>2. 关于我们页面</h3>
+                <div class="admin-form-row">
+                    <label class="admin-label">页面标题</label>
+                    <input type="text" id="abt-title" class="admin-input">
+                </div>
+                <div class="admin-form-row">
+                    <label class="admin-label">详细介绍内容 (支持换行)</label>
+                    <textarea id="abt-content" class="admin-textarea" rows="6"></textarea>
+                </div>
+                <div class="admin-form-row" style="display: flex; gap: 20px;">
+                    <div style="flex: 1;">
+                        <label class="admin-label">企业形象插图</label>
+                        <input type="file" id="abt-file-img" accept="image/*" class="admin-input">
+                    </div>
+                    <div style="flex: 1;">
+                        <label class="admin-label">企业宣传视频</label>
+                        <input type="file" id="abt-file-video" accept="video/*" class="admin-input">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. CONTACT CARD -->
+            <div id="section-contact" class="admin-card">
+                <h3>3. 联系我们页面</h3>
+                <div class="admin-form-row">
+                    <label class="admin-label">引导语</label>
+                    <textarea id="ct-intro" class="admin-textarea" rows="2"></textarea>
+                </div>
+                <div class="admin-form-row" style="display: flex; gap: 20px; flex-wrap: wrap;">
+                    <div style="flex: 1; min-width: 200px;">
+                        <label class="admin-label">公司地址</label>
+                        <input type="text" id="ct-addr" class="admin-input">
+                    </div>
+                    <div style="flex: 1; min-width: 200px;">
+                        <label class="admin-label">联系电话</label>
+                        <input type="text" id="ct-phone" class="admin-input">
+                    </div>
+                </div>
+                <div class="admin-form-row" style="display: flex; gap: 20px; flex-wrap: wrap;">
+                    <div style="flex: 1; min-width: 200px;">
+                        <label class="admin-label">电子邮箱</label>
+                        <input type="text" id="ct-email" class="admin-input">
+                    </div>
+                    <div style="flex: 1; min-width: 200px;">
+                        <label class="admin-label">工作时间</label>
+                        <input type="text" id="ct-time" class="admin-input">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. PRODUCTS CARD -->
+            <div id="section-products" class="admin-card">
+                <h3>4. 商品管理</h3>
+                
+                <div class="admin-toolbar">
+                    <div>
+                        <span style="font-weight:bold; color:#555; margin-right: 10px;">⚡ 快捷操作</span>
+                        <span style="font-size: 12px; color: #888;">点击表格中的图片可直接上传替换</span>
+                    </div>
+                    <div>
+                        <button onclick="addProduct()" class="admin-btn admin-btn-dark">+ 添加新商品</button>
+                        <button onclick="batchSetImagePaths()" class="admin-btn admin-btn-primary" style="margin-left: 10px;">📂 批量重置图片路径</button>
+                    </div>
+                </div>
+
+                <div style="overflow-x: auto;">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th width="50">ID</th>
+                                <th width="80">缩略图</th>
+                                <th>商品名称</th>
+                                <th width="100">价格</th>
+                                <th width="120">分类代码</th>
+                                <th width="100">操作</th>
+                            </tr>
+                        </thead>
+                        <tbody id="admin-list">
+                            <!-- JS Injected -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <!-- Footer hint -->
+            <div style="text-align: center; color: #999; padding: 20px;">
+                零八四商城管理后台 &copy; 2024
+            </div>
+
+        </div>
+    </div>
+
+    <!-- FLOATING EXPORT BUTTON -->
+    <button id="btn-export" class="floating-export-btn">
+        保存并导出配置 (data.js)
+    </button>
+
+    <!-- PRODUCT EDIT MODAL -->
+    <div id="edit-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>编辑商品信息</h3>
+                <span class="close-modal" onclick="closeEditModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" id="edit-id">
+                
+                <div class="admin-form-row">
+                    <label class="admin-label">商品名称</label>
+                    <input type="text" id="edit-name" class="admin-input">
+                </div>
+                
+                <div style="display: flex; gap: 15px; margin-bottom: 20px;">
+                    <div style="flex: 1;">
+                        <label class="admin-label">价格 (¥)</label>
+                        <input type="number" id="edit-price" class="admin-input">
+                    </div>
+                    <div style="flex: 1;">
+                        <label class="admin-label">分类代码</label>
+                        <input type="text" id="edit-cat" class="admin-input" placeholder="elec, fashion...">
+                    </div>
+                </div>
+
+                <div style="background:#f8f9fa; padding:15px; border-radius:6px; border:1px solid #eee;">
+                    <label class="admin-label" style="color:#e4393c;">商品主图配置</label>
+                    <div style="display:flex; gap:15px; margin-top:10px; align-items:flex-start;">
+                        <img id="edit-img-preview" src="" style="width:80px; height:80px; object-fit:cover; border:1px solid #ddd; background:#fff; border-radius: 4px;">
+                        <div style="flex:1;">
+                            <input type="text" id="edit-img-url" class="admin-input" placeholder="输入网络图片地址 或 images/1.jpg" oninput="document.getElementById('edit-img-preview').src=this.value" style="margin-bottom: 8px;">
+                            
+                            <div style="position: relative;">
+                                <input type="file" id="edit-file" accept="image/*" class="admin-input" style="padding: 5px;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="modal-btn cancel" onclick="closeEditModal()">取消</button>
+                <button class="modal-btn save" onclick="saveEditedProduct()">保存修改</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/script.js"></script>
+    <script>
+        // Init logic specifically for the new layout
+        document.querySelectorAll('.admin-nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                if(this.getAttribute('href').startsWith('#')) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

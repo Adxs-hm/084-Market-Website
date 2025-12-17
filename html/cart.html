@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>我的购物车 - 零八四商城</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/data.js"></script>
+</head>
+<body>
+    <div id="cart-page">
+        <!-- HEADER -->
+        <div class="header">
+            <div class="container clearfix">
+                <a href="index.html" class="logo">084 MALL</a>
+                <div class="logo" style="font-size:22px; margin-left:20px; color:#333; margin-top:10px; font-weight:normal;">购物车结算</div>
+            </div>
+        </div>
+
+        <!-- CONTENT -->
+        <div class="container" style="min-height: 600px; padding-bottom: 50px;">
+            <table class="cart-table">
+                <thead>
+                    <tr>
+                        <th width="120">商品图片</th>
+                        <th>商品信息</th>
+                        <th width="120">单价</th>
+                        <th width="150">数量</th>
+                        <th width="150">小计</th>
+                        <th width="100">操作</th>
+                    </tr>
+                </thead>
+                <tbody id="cart-body">
+                    <!-- JS Injected -->
+                </tbody>
+            </table>
+
+            <!-- WRAPPER FOR CHECKOUT ELEMENTS -->
+            <div id="checkout-section">
+                <!-- CHECKOUT FORM CARD -->
+                <div class="checkout-box">
+                    <div class="checkout-header">收货人信息</div>
+                    <form id="checkout-form" onsubmit="event.preventDefault(); alert('🎉 订单提交成功！卡戎快运正在极速揽件中...');">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label>收货人姓名 <span style="color:red">*</span></label>
+                                <input type="text" class="form-control" required placeholder="姓名">
+                            </div>
+                            <div class="form-group">
+                                <label>联系电话 <span style="color:red">*</span></label>
+                                <input type="tel" class="form-control" required placeholder="手机号码">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>收货地址 <span style="color:red">*</span></label>
+                            <input type="text" class="form-control" required placeholder="省/市/区/街道 详细地址">
+                        </div>
+                    </form>
+                </div>
+
+                <!-- TOTAL BAR -->
+                <div class="total-bar-container">
+                    <div class="checkout-header">订单结算</div>
+                    <div class="total-info">
+                        <p style="margin-bottom:10px;">商品总数：<span style="float:right;" id="cart-count-summary">0 件</span></p>
+                        <p style="margin-bottom:10px;">运费：<span style="float:right;">¥0.00</span></p>
+                        <hr style="border:none; border-top:1px solid #eee; margin:15px 0;">
+                        <!-- Fixed: Removed hardcoded ¥ outside the span, JS will handle currency formatting or we ensure span only has number -->
+                        <p style="text-align:right;">应付总额：<span class="final-price">¥<span id="cart-total">0</span></span></p>
+                    </div>
+                    <button type="submit" form="checkout-form" class="checkout-btn">提交订单</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <div class="footer">
+            <div class="container">
+                <p>零八四商城 (084 Mall) &copy; 2024 | 合作物流：卡戎快运</p>
+            </div>
+        </div>
+    </div>
+    <script src="../js/script.js"></script>
+</body>
+</html>

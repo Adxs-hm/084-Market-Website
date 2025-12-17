@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>联系我们 - 零八四商城</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/data.js"></script>
+</head>
+<body>
+    <div id="contact-page">
+        <!-- HEADER -->
+        <div class="header">
+            <div class="container">
+                <a href="index.html" class="logo">084 MALL</a>
+                
+                <div class="search-box">
+                    <input type="text" placeholder="搜索您喜爱的商品...">
+                    <button onclick="handleSearch()">搜索</button>
+                </div>
+
+                <div class="header-right">
+                    <div class="header-cat-dropdown">
+                        <span>☰ 商品分类 ▼</span>
+                        <div class="cat-menu">
+                            <a href="list.html?cat=elec">⚡ 数码电器</a>
+                            <a href="list.html?cat=fashion">👗 时尚服饰</a>
+                            <a href="list.html?cat=food">🍔 美食特产</a>
+                            <a href="list.html?cat=home">🏠 家居生活</a>
+                            <a href="list.html?cat=books">📚 图书音像</a>
+                            <a href="list.html?cat=toys">🧸 玩具乐器</a>
+                        </div>
+                    </div>
+                    <a href="cart.html" class="my-cart-btn">购物车 (<span id="cart-count">0</span>)</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- NAV BAR -->
+        <div class="nav">
+            <div class="container">
+                <ul class="nav-list">
+                    <li><a href="index.html">首页</a></li>
+                    <li>
+                        <a href="list.html" style="padding-right: 35px;">全部商品 <span style="font-size:12px;">▼</span></a>
+                        <div class="nav-dropdown">
+                            <a href="list.html?cat=elec">数码电器</a>
+                            <a href="list.html?cat=fashion">时尚服饰</a>
+                            <a href="list.html?cat=food">美食特产</a>
+                            <a href="list.html?cat=home">家居生活</a>
+                            <a href="list.html?cat=books">图书音像</a>
+                            <a href="list.html?cat=toys">玩具乐器</a>
+                            <a href="list.html?cat=sports">运动户外</a>
+                            <a href="list.html?cat=auto">汽车用品</a>
+                        </div>
+                    </li>
+                    <li><a href="about.html">关于我们</a></li>
+                    <li><a href="contact.html">联系我们</a></li>
+                    <li><a href="help.html">帮助中心</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- CONTENT -->
+        <div class="container" style="margin-top:20px;">
+            <h1 class="section-title">联系我们</h1>
+            
+            <div style="display:flex; background:#fff; padding:40px; border-radius:4px; box-shadow:0 2px 5px rgba(0,0,0,0.05);">
+                <!-- Info -->
+                <div style="flex:1; padding-right:40px; border-right:1px solid #eee;">
+                    <h2 style="font-size:24px; color:#e4393c; margin-bottom:20px;">零八四商城客户服务</h2>
+                    <p id="contact-intro" style="margin-bottom:15px; color:#666;">
+                        <!-- JS Injected -->
+                    </p>
+                    
+                    <div style="margin-top:30px;">
+                        <p style="margin-bottom:10px;"><strong>📍 公司地址：</strong> <span id="contact-address"></span></p>
+                        <p style="margin-bottom:10px;"><strong>📞 客服电话：</strong> <span id="contact-phone"></span></p>
+                        <p style="margin-bottom:10px;"><strong>📧 电子邮箱：</strong> <span id="contact-email"></span></p>
+                        <p style="margin-bottom:10px;"><strong>🕒 工作时间：</strong> <span id="contact-time"></span></p>
+                    </div>
+                </div>
+
+                <!-- Form -->
+                <div style="flex:1; padding-left:40px;">
+                    <h3 style="margin-bottom:20px;">在线留言</h3>
+                    <form onsubmit="event.preventDefault(); alert('留言已发送！我们会尽快联系您。'); this.reset();">
+                        <div style="margin-bottom:15px;">
+                            <label style="display:block; margin-bottom:5px;">姓名</label>
+                            <input type="text" required style="width:100%; height:36px; border:1px solid #ccc; padding:0 10px;">
+                        </div>
+                        <div style="margin-bottom:15px;">
+                            <label style="display:block; margin-bottom:5px;">邮箱</label>
+                            <input type="email" required style="width:100%; height:36px; border:1px solid #ccc; padding:0 10px;">
+                        </div>
+                        <div style="margin-bottom:15px;">
+                            <label style="display:block; margin-bottom:5px;">留言内容</label>
+                            <textarea required rows="5" style="width:100%; border:1px solid #ccc; padding:10px;"></textarea>
+                        </div>
+                        <button type="submit" style="background:#e4393c; color:#fff; border:none; padding:10px 30px; cursor:pointer; font-size:16px;">发送留言</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <div class="footer">
+            <div class="container">
+                <div style="margin-bottom:20px; color:#666;">
+                    <a href="about.html" style="margin:0 15px;">关于我们</a>|
+                    <a href="contact.html" style="margin:0 15px;">联系我们</a>|
+                    <a href="help.html" style="margin:0 15px;">帮助中心</a>
+                </div>
+                <p>
+                    零八四商城 (084 Mall) &copy; 2024
+                    <a href="admin.html" class="admin-hidden-link" title="系统入口">π</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="../js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>商品详情 - 零八四商城</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/data.js"></script>
+</head>
+<body>
+    <div id="detail-page">
+        <!-- MARQUEE BAR -->
+        <div id="marquee-container" class="marquee-bar"></div>
+
+        <!-- HEADER -->
+        <div class="header">
+            <div class="container">
+                <a href="index.html" class="logo">084 MALL</a>
+                <div class="search-box">
+                    <input type="text" placeholder="搜索您喜爱的商品...">
+                    <button onclick="handleSearch()">搜索</button>
+                </div>
+                <div class="header-right">
+                    <div class="header-cat-dropdown">
+                        <span>☰ 商品分类 ▼</span>
+                        <div class="cat-menu">
+                            <a href="list.html?cat=elec">⚡ 数码电器</a>
+                            <a href="list.html?cat=fashion">👗 时尚服饰</a>
+                            <a href="list.html?cat=food">🍔 美食特产</a>
+                            <a href="list.html?cat=home">🏠 家居生活</a>
+                            <a href="list.html?cat=books">📚 图书音像</a>
+                            <a href="list.html?cat=toys">🧸 玩具乐器</a>
+                            <a href="list.html?cat=sports">⚽ 运动户外</a>
+                            <a href="list.html?cat=auto">🚘 汽车用品</a>
+                        </div>
+                    </div>
+                    <a href="cart.html" class="my-cart-btn">购物车 (<span id="cart-count">0</span>)</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- NAV BAR -->
+        <div class="nav">
+            <div class="container">
+                <ul class="nav-list">
+                    <li><a href="index.html">首页</a></li>
+                    <li>
+                        <a href="list.html" style="padding-right: 35px;">全部商品 <span style="font-size:12px;">▼</span></a>
+                        <div class="nav-dropdown">
+                            <a href="list.html?cat=elec">数码电器</a>
+                            <a href="list.html?cat=fashion">时尚服饰</a>
+                            <a href="list.html?cat=food">美食特产</a>
+                            <a href="list.html?cat=home">家居生活</a>
+                            <a href="list.html?cat=books">图书音像</a>
+                            <a href="list.html?cat=toys">玩具乐器</a>
+                            <a href="list.html?cat=sports">运动户外</a>
+                            <a href="list.html?cat=auto">汽车用品</a>
+                        </div>
+                    </li>
+                    <li><a href="about.html">关于我们</a></li>
+                    <li><a href="contact.html">联系我们</a></li>
+                    <li><a href="help.html">帮助中心</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- PRODUCT INFO -->
+        <div class="container">
+            <div class="detail-box clearfix" style="margin-top:20px;">
+                <div class="detail-img zoom-effect">
+                    <img id="d-img" src="" alt="">
+                </div>
+                <div class="detail-info">
+                    <div id="d-name" class="detail-title"></div>
+                    <div class="detail-price">价格：¥<span id="d-price"></span></div>
+                    <p id="d-desc" style="color:#666; margin-bottom:20px; line-height:1.8;"></p>
+                    
+                    <div class="qty-control" style="margin-bottom:20px;">
+                        数量：
+                        <button id="btn-minus" style="width:30px;height:30px;">-</button>
+                        <input type="text" id="qty" value="1" readonly style="width:50px;text-align:center;">
+                        <button id="btn-plus" style="width:30px;height:30px;">+</button>
+                    </div>
+
+                    <button id="add-to-cart" class="btn-add-cart">加入购物车</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- REVIEWS -->
+        <div class="container">
+            <div class="review-section">
+                <h3 class="review-title">商品评价</h3>
+
+                <!-- Review Form -->
+                <div class="review-form">
+                    <form id="review-form">
+                        <div class="form-row">
+                            <label>昵称：</label>
+                            <input type="text" id="review-user" placeholder="匿名用户" style="padding:5px;">
+                        </div>
+                        <div class="form-row">
+                            <label>评分：</label>
+                            <select id="review-rating" style="padding:5px;">
+                                <option value="5">★★★★★ (5星)</option>
+                                <option value="4">★★★★ (4星)</option>
+                                <option value="3">★★★ (3星)</option>
+                                <option value="2">★★ (2星)</option>
+                                <option value="1">★ (1星)</option>
+                            </select>
+                        </div>
+                        <div class="form-row">
+                            <label style="vertical-align:top;">内容：</label>
+                            <textarea id="review-content" rows="3" style="width:500px; padding:5px;" placeholder="分享您的使用体验..." required></textarea>
+                        </div>
+                        <button type="submit" style="background:#333; color:#fff; border:none; padding:8px 20px; cursor:pointer;">发表评论</button>
+                    </form>
+                </div>
+
+                <!-- Review List -->
+                <div id="review-list">
+                    <!-- JS Injected -->
+                </div>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <div class="footer">
+            <div class="container">
+                <div style="margin-bottom:20px; color:#666;">
+                    <a href="about.html" style="margin:0 15px;">关于我们</a>|
+                    <a href="contact.html" style="margin:0 15px;">联系我们</a>|
+                    <a href="help.html" style="margin:0 15px;">帮助中心</a>
+                </div>
+                <p>
+                    零八四商城 (084 Mall) &copy; 2024
+                    <a href="admin.html" class="admin-hidden-link" title="系统入口">π</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="../js/script.js"></script>
+</body>
+</html>

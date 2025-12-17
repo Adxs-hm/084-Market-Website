@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>商品分类 - 零八四商城</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/data.js"></script>
+</head>
+<body>
+    <div id="list-page">
+        <!-- MARQUEE BAR -->
+        <div id="marquee-container" class="marquee-bar"></div>
+
+        <!-- HEADER -->
+        <div class="header">
+            <div class="container">
+                <a href="index.html" class="logo">084 MALL</a>
+                <div class="search-box">
+                    <input type="text" placeholder="搜索您喜爱的商品...">
+                    <button onclick="handleSearch()">搜索</button>
+                </div>
+                <div class="header-right">
+                     <div class="header-cat-dropdown">
+                        <span>☰ 商品分类 ▼</span>
+                        <div class="cat-menu">
+                            <a href="list.html?cat=elec">⚡ 数码电器</a>
+                            <a href="list.html?cat=fashion">👗 时尚服饰</a>
+                            <a href="list.html?cat=food">🍔 美食特产</a>
+                            <a href="list.html?cat=home">🏠 家居生活</a>
+                            <a href="list.html?cat=books">📚 图书音像</a>
+                            <a href="list.html?cat=toys">🧸 玩具乐器</a>
+                            <a href="list.html?cat=sports">⚽ 运动户外</a>
+                            <a href="list.html?cat=auto">🚘 汽车用品</a>
+                        </div>
+                    </div>
+                    <a href="cart.html" class="my-cart-btn">购物车 (<span id="cart-count">0</span>)</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- NAV BAR -->
+        <div class="nav">
+            <div class="container">
+                <ul class="nav-list">
+                    <li><a href="index.html">首页</a></li>
+                    <li>
+                        <a href="list.html" style="padding-right: 35px;">全部商品 <span style="font-size:12px;">▼</span></a>
+                        <div class="nav-dropdown">
+                            <a href="list.html?cat=elec">数码电器</a>
+                            <a href="list.html?cat=fashion">时尚服饰</a>
+                            <a href="list.html?cat=food">美食特产</a>
+                            <a href="list.html?cat=home">家居生活</a>
+                            <a href="list.html?cat=books">图书音像</a>
+                            <a href="list.html?cat=toys">玩具乐器</a>
+                            <a href="list.html?cat=sports">运动户外</a>
+                            <a href="list.html?cat=auto">汽车用品</a>
+                        </div>
+                    </li>
+                    <li><a href="about.html">关于我们</a></li>
+                    <li><a href="contact.html">联系我们</a></li>
+                    <li><a href="help.html">帮助中心</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- CONTENT -->
+        <div class="container clearfix" style="margin-top:20px;">
+            <!-- SIDEBAR WITH LIGHT THEME -->
+            <div class="list-layout-sidebar category-sidebar light-theme" style="float:left;">
+                <h3>商品分类</h3>
+                <ul id="list-sidebar-list">
+                    <!-- JS Injected -->
+                </ul>
+            </div>
+
+            <!-- RIGHT LIST -->
+            <div class="list-layout-content" style="float:left; width:1000px; padding-left:20px;">
+                <h1 class="section-title" id="list-title" style="margin-top:0;">所有商品</h1>
+                <div class="grid-4 clearfix" id="product-list">
+                    <!-- JS will inject -->
+                </div>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <div class="footer">
+            <div class="container">
+                <div style="margin-bottom:20px; color:#666;">
+                    <a href="about.html" style="margin:0 15px;">关于我们</a>|
+                    <a href="contact.html" style="margin:0 15px;">联系我们</a>|
+                    <a href="help.html" style="margin:0 15px;">帮助中心</a>
+                </div>
+                <p>
+                    零八四商城 (084 Mall) &copy; 2024
+                    <a href="admin.html" class="admin-hidden-link" title="系统入口">π</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="../js/script.js"></script>
+</body>
+</html>

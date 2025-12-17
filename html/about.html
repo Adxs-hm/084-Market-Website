@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>关于我们 - 零八四商城</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/data.js"></script>
+</head>
+<body>
+    <div id="about-page">
+        <!-- HEADER (Unified) -->
+        <div class="header">
+            <div class="container">
+                <a href="index.html" class="logo">084 MALL</a>
+                
+                <div class="search-box">
+                    <input type="text" placeholder="搜索您喜爱的商品...">
+                    <button onclick="handleSearch()">搜索</button>
+                </div>
+
+                <div class="header-right">
+                    <div class="header-cat-dropdown">
+                        <span>☰ 商品分类 ▼</span>
+                        <div class="cat-menu">
+                            <a href="list.html?cat=elec">⚡ 数码电器</a>
+                            <a href="list.html?cat=fashion">👗 时尚服饰</a>
+                            <a href="list.html?cat=food">🍔 美食特产</a>
+                            <a href="list.html?cat=home">🏠 家居生活</a>
+                            <a href="list.html?cat=books">📚 图书音像</a>
+                            <a href="list.html?cat=toys">🧸 玩具乐器</a>
+                        </div>
+                    </div>
+                    <a href="cart.html" class="my-cart-btn">购物车 (<span id="cart-count">0</span>)</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- NAV BAR -->
+        <div class="nav">
+            <div class="container">
+                <ul class="nav-list">
+                    <li><a href="index.html">首页</a></li>
+                    <li>
+                        <a href="list.html" style="padding-right: 35px;">全部商品 <span style="font-size:12px;">▼</span></a>
+                        <div class="nav-dropdown">
+                            <a href="list.html?cat=elec">数码电器</a>
+                            <a href="list.html?cat=fashion">时尚服饰</a>
+                            <a href="list.html?cat=food">美食特产</a>
+                            <a href="list.html?cat=home">家居生活</a>
+                            <a href="list.html?cat=books">图书音像</a>
+                            <a href="list.html?cat=toys">玩具乐器</a>
+                            <a href="list.html?cat=sports">运动户外</a>
+                            <a href="list.html?cat=auto">汽车用品</a>
+                        </div>
+                    </li>
+                    <li><a href="about.html">关于我们</a></li>
+                    <li><a href="contact.html">联系我们</a></li>
+                    <li><a href="help.html">帮助中心</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- CONTENT -->
+        <div class="container" style="margin-top:20px;">
+            <h1 class="section-title" id="about-title">关于我们</h1>
+            
+            <div style="background:#fff; padding:40px; margin-bottom:20px; border-radius:4px; box-shadow:0 2px 5px rgba(0,0,0,0.05);">
+                <div style="display:flex; gap:30px; align-items:flex-start;">
+                    <div style="flex:1;">
+                         <div class="zoom-effect" style="border-radius:8px; height:300px;">
+                             <img id="about-img" src="" alt="Office" style="width:100%; height:100%; object-fit:cover;">
+                         </div>
+                    </div>
+                    <div style="flex:1; line-height:1.8; color:#555;">
+                        <p id="about-content" style="white-space: pre-wrap; font-size:16px;">
+                            <!-- JS Injected -->
+                        </p>
+                    </div>
+                </div>
+
+                <div class="section-title" style="margin-top:40px;">企业宣传片</div>
+                <div class="video-section" style="border-radius:8px; overflow:hidden; background:#000;">
+                    <!-- Fallback message in case video fails -->
+                    <video id="about-video" controls style="width:100%; max-height:500px; display:block;">
+                        <source id="about-video-src" src="" type="video/mp4">
+                        <div style="color:#fff; padding:50px; text-align:center;">
+                            您的浏览器不支持视频播放，或视频文件加载失败。
+                        </div>
+                    </video>
+                </div>
+            </div>
+
+            <div class="grid-4 clearfix" style="margin-top:20px;">
+                <div class="product-card" style="width:33.33%;">
+                    <div class="card-inner" style="text-align:center; padding:30px;">
+                        <div style="font-size:40px; color:#e4393c; margin-bottom:10px;">★</div>
+                        <h3>品质保证</h3>
+                        <p style="color:#999; font-size:12px;">100% 正品货源</p>
+                    </div>
+                </div>
+                <div class="product-card" style="width:33.33%;">
+                    <div class="card-inner" style="text-align:center; padding:30px;">
+                        <div style="font-size:40px; color:#e4393c; margin-bottom:10px;">✈</div>
+                        <h3>极速物流</h3>
+                        <p style="color:#999; font-size:12px;">卡戎快运承运</p>
+                    </div>
+                </div>
+                <div class="product-card" style="width:33.33%;">
+                    <div class="card-inner" style="text-align:center; padding:30px;">
+                        <div style="font-size:40px; color:#e4393c; margin-bottom:10px;">☎</div>
+                        <h3>无忧售后</h3>
+                        <p style="color:#999; font-size:12px;">7x24小时客服</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- FOOTER -->
+        <div class="footer">
+            <div class="container">
+                <div style="margin-bottom:20px; color:#666;">
+                    <a href="about.html" style="margin:0 15px;">关于我们</a>|
+                    <a href="contact.html" style="margin:0 15px;">联系我们</a>|
+                    <a href="help.html" style="margin:0 15px;">帮助中心</a>
+                </div>
+                <p>
+                    零八四商城 (084 Mall) &copy; 2024 | 合作物流：卡戎快运
+                    <a href="admin.html" class="admin-hidden-link" title="系统入口">π</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Lightbox -->
+    <div id="lightbox" onclick="this.style.display='none'">
+        <img src="" alt="Full Size">
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,174 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>零八四商城 (084 Mall) - 首页</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/data.js"></script>
+</head>
+<body>
+    <div id="home-page">
+        <!-- MARQUEE BAR -->
+        <div id="marquee-container" class="marquee-bar"></div>
+
+        <!-- HEADER -->
+        <div class="header">
+            <div class="container">
+                <a href="index.html" class="logo">084 MALL</a>
+                
+                <div class="search-box">
+                    <input type="text" placeholder="搜索商品，例如：智能手机...">
+                    <button onclick="handleSearch()">搜索</button>
+                </div>
+
+                <!-- RIGHT AREA -->
+                <div class="header-right">
+                    <div class="header-cat-dropdown">
+                        <span>☰ 商品分类 ▼</span>
+                        <div class="cat-menu">
+                            <a href="list.html?cat=elec">⚡ 数码电器</a>
+                            <a href="list.html?cat=fashion">👗 时尚服饰</a>
+                            <a href="list.html?cat=food">🍔 美食特产</a>
+                            <a href="list.html?cat=home">🏠 家居生活</a>
+                            <a href="list.html?cat=books">📚 图书音像</a>
+                            <a href="list.html?cat=toys">🧸 玩具乐器</a>
+                            <a href="list.html?cat=sports">⚽ 运动户外</a>
+                            <a href="list.html?cat=auto">🚘 汽车用品</a>
+                        </div>
+                    </div>
+                    <a href="cart.html" class="my-cart-btn">
+                        🛒 购物车 (<span id="cart-count">0</span>)
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- NAV BAR -->
+        <div class="nav">
+            <div class="container">
+                <ul class="nav-list">
+                    <li><a href="index.html">首页</a></li>
+                    <li>
+                        <a href="list.html" style="padding-right: 35px;">全部商品 <span style="font-size:12px;">▼</span></a>
+                        <div class="nav-dropdown">
+                            <a href="list.html?cat=elec">数码电器</a>
+                            <a href="list.html?cat=fashion">时尚服饰</a>
+                            <a href="list.html?cat=food">美食特产</a>
+                            <a href="list.html?cat=home">家居生活</a>
+                            <a href="list.html?cat=books">图书音像</a>
+                            <a href="list.html?cat=toys">玩具乐器</a>
+                            <a href="list.html?cat=sports">运动户外</a>
+                            <a href="list.html?cat=auto">汽车用品</a>
+                        </div>
+                    </li>
+                    <li><a href="about.html">关于我们</a></li>
+                    <li><a href="contact.html">联系我们</a></li>
+                    <li><a href="help.html">帮助中心</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- MAIN AREA: Sidebar + Carousel + UserInfo -->
+        <div class="container main-area">
+             <!-- Sidebar -->
+             <div class="category-sidebar">
+                 <h3>商品分类</h3>
+                 <ul id="home-sidebar-list">
+                     <!-- JS Populated -->
+                 </ul>
+             </div>
+             
+             <!-- Carousel -->
+             <div class="carousel-wrapper">
+                 <div class="carousel-slides">
+                     <!-- JS Populated -->
+                 </div>
+             </div>
+
+             <!-- News Column -->
+             <div class="news-column">
+                 <!-- Modified User Info Section -->
+                 <div class="user-info">
+                     <div style="font-size: 20px; font-weight: bold; color: #333; margin-bottom: 12px; margin-top: 10px;">Hi, 会员</div>
+                     <div style="display: flex; justify-content: center; gap: 8px;">
+                         <span class="tag" style="background:#333; color:#e5d790; margin:0; padding: 2px 8px; border-radius: 10px; font-weight: bold;">PLUS</span>
+                         <span class="tag" style="background:#e4393c; color:#fff; margin:0; padding: 2px 8px; border-radius: 10px; font-weight: bold;">京享值</span>
+                     </div>
+                 </div>
+                 
+                 <div class="news-list">
+                     <h4 style="border-bottom: 1px solid #eee; padding-bottom: 5px; margin-bottom: 8px;">🔥 最新资讯</h4>
+                     <ul>
+                         <li><span class="tag">特惠</span> 084商城盛大开业</li>
+                         <li><span class="tag">公告</span> 卡戎快运运费调整</li>
+                         <li><span class="tag">活动</span> 数码家电满1000减100</li>
+                         <li><span class="tag">推荐</span> 夏季新品清凉上市</li>
+                         <li><span class="tag">福利</span> 新会员注册送好礼</li>
+                     </ul>
+                 </div>
+             </div>
+        </div>
+
+        <!-- FLOORS -->
+        <div class="container floor-section">
+            <div class="floor-header clearfix">
+                <span class="floor-title">⚡ 数码电器</span>
+                <a href="list.html?cat=elec" class="floor-more">查看更多 ></a>
+            </div>
+            <div class="grid-4 clearfix" id="floor-elec-list"></div>
+        </div>
+
+        <div class="container floor-section">
+             <div class="floor-header clearfix">
+                <span class="floor-title">👗 时尚服饰</span>
+                <a href="list.html?cat=fashion" class="floor-more">查看更多 ></a>
+            </div>
+            <div class="grid-4 clearfix" id="floor-fashion-list"></div>
+        </div>
+
+         <div class="container floor-section">
+             <div class="floor-header clearfix">
+                <span class="floor-title">🍔 美食特产</span>
+                <a href="list.html?cat=food" class="floor-more">查看更多 ></a>
+            </div>
+            <div class="grid-4 clearfix" id="floor-food-list"></div>
+        </div>
+
+        <!-- GIF SECTION (Moved to Bottom) -->
+        <div class="container gif-section">
+             <div class="gif-label">
+                 <h3>今日推荐</h3>
+                 <p>精选好物 动图展示</p>
+                 <!-- Button removed as requested -->
+             </div>
+             <div class="gif-container">
+                 <div class="gif-overlay"></div>
+                 <!-- Replaced img with canvas for generated animation -->
+                 <canvas id="dynamic-gif-canvas" style="display: block; width: 100%; height: 100%;"></canvas>
+             </div>
+        </div>
+
+        <!-- VIDEO SECTION (Moved to Bottom) -->
+        <div class="container video-section" id="home-video-section">
+            <!-- JS Populated -->
+        </div>
+
+        <!-- FOOTER -->
+        <div class="footer">
+            <div class="container">
+                <div style="margin-bottom:20px; color:#666;">
+                    <a href="about.html" style="margin:0 15px;">关于我们</a>|
+                    <a href="contact.html" style="margin:0 15px;">联系我们</a>|
+                    <a href="help.html" style="margin:0 15px;">帮助中心</a>
+                </div>
+                <p>
+                    零八四商城 (084 Mall) &copy; 2024
+                    <a href="admin.html" class="admin-hidden-link" title="系统入口">π</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="../js/script.js"></script>
+</body>
+</html>
